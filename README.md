@@ -241,6 +241,25 @@ Whether it’s bug fixes, new features, or improving documentation — every con
 
 <img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
+![NSoC 2026](https://img.shields.io/badge/NSoC-2026-purple)
+![Project Kernel](https://img.shields.io/badge/Role-Project%20Kernel-success)
+
+## 🏆 NSoC 2026 Project Selection
+
+We are excited to announce that this project has been officially selected for **Nexus Spring of Code 2026 (NSoC '26)**.
+
+As a **Project Kernel**, this project will be actively maintained and scaled during the program with support from contributors and the open-source community.
+
+### 🎯 Highlights
+- Officially selected for NSoC 2026
+- Contributor phase starts from **15 April**
+- Open-source mentorship and collaboration
+- Active issue tracking and contributor support
+
+We welcome contributors to participate and improve this project.
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
 ## ❄️ Winter Of Code Social 2025
 This project is excited to be a part of **Winter Of Code Social 2025**!
 Contribute awesome pull requests, learn new technologies, and become a part of the open-source community.
