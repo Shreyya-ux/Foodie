@@ -1,3 +1,6 @@
+
+
+
 {
   "name": "foodie",
   "version": "1.0.0",
@@ -7,16 +10,13 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest",
-    "deploy": "wrangler deploy",
-    "preview": "wrangler dev"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^30.2.0",
-    "wrangler": "^4.78.0"
+    "jest": "^30.2.0"
   },
   "dependencies": {
     "sharp": "^0.34.5"
