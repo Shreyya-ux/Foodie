@@ -75,10 +75,6 @@ const qrCodeImg = document.querySelector('.qr-code-img');
 // ===== CART OPEN/CLOSE =====
 cartIcon?.addEventListener('click', () => {
     cartTab.classList.add("cart-tab-active");
-    // Show skeleton cart items if cart is empty
-    if (typeof addProduct !== 'undefined' && addProduct.length === 0) {
-        showSkeletonCartItems();
-    }
 });
 closeBtn?.addEventListener('click', () => cartTab.classList.remove("cart-tab-active"));
 hamburger?.addEventListener('click', () => {
@@ -225,6 +221,13 @@ const showToast = (message) => {
 const updateTotalPrice = () => {
     let totalPrice = 0;
     let totalQuantity = 0;
+
+    if (cartList && (typeof addProduct !== 'undefined' && addProduct.length === 0)) {
+        cartList.innerHTML = '<div class="empty-cart-message" style="text-align:center; padding: 2rem; color: var(--text-secondary); margin-top:2rem;"><i class="fa-solid fa-basket-shopping" style="font-size:3rem; opacity:0.5; margin-bottom: 1rem;"></i><p>Your cart is empty</p></div>';
+    } else if (cartList) {
+        const emptyMsg = cartList.querySelector('.empty-cart-message');
+        if (emptyMsg) emptyMsg.remove();
+    }
 
     if (cartList && cartList.children.length > 0) {
         cartList.querySelectorAll('.item').forEach(item => {
@@ -767,6 +770,7 @@ const loadProducts = async (retryCount = 0) => {
     try {
         // Show skeleton loading state
         showSkeletonCards();
+        showSkeletonCartItems();
 
         // Show loading state
         const container = document.querySelector('.menu-container') || document.querySelector('.popular-container') || document.body;
@@ -988,8 +992,15 @@ const saveCart = () => {
     } catch (_) {}
 };
 const restoreCartFromStorage = () => {
+    if (cartList) cartList.innerHTML = '';
     const saved = loadCart();
-    if (!saved || saved.length === 0) { updateTotalPrice(); return; }
+    if (!saved || saved.length === 0) { 
+        if (cartList) {
+            cartList.innerHTML = '<div class="empty-cart-message" style="text-align:center; padding: 2rem; color: var(--text-secondary);"><i class="fa-solid fa-basket-shopping" style="font-size:3rem; opacity:0.5; margin-bottom: 1rem;"></i><p>Your cart is empty</p></div>';
+        }
+        updateTotalPrice(); 
+        return; 
+    }
 
     // Support both legacy {id,quantity} and new full-product objects
     saved.forEach(s => {
