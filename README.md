@@ -175,6 +175,53 @@ Insert the following script inside the <head> section of your main HTML file (e.
 * You should see your visit appear within seconds 🎯
 
 
+## 🗺️ Google Maps Places Setup (Nearby Top Rated Restaurants)
+
+The homepage now supports live nearby restaurant discovery using:
+
+* Google Maps JavaScript API
+* Google Places API
+
+### 1️⃣ Enable APIs
+
+In Google Cloud Console, enable both APIs for your project:
+
+* Maps JavaScript API
+* Places API
+
+### 2️⃣ Create an API key
+
+Create a browser API key and add referrer restrictions for your domain(s).
+
+### 3️⃣ Configure the API key in Foodie
+
+Use either option below:
+
+* Option A: Add this script before `../js/nearby-restaurants-home.js` in `html/index.html`
+
+```html
+<script>
+   window.FOODIE_CONFIG = {
+      googleMapsApiKey: "YOUR_GOOGLE_MAPS_API_KEY"
+   };
+</script>
+```
+
+* Option B: Set it in browser localStorage (good for local testing)
+
+```js
+localStorage.setItem("foodie_google_maps_api_key", "YOUR_GOOGLE_MAPS_API_KEY");
+```
+
+### 4️⃣ Verify feature behavior
+
+* Open the homepage (`html/index.html`)
+* Allow location permission when prompted
+* You should see:
+   * Nearby top-rated restaurant markers on map
+   * Ranked list with name, rating, distance, and open/closed status
+
+
 ## 🚢 Deployment (GitHub Pages)
 
 This site’s entry file is at `html/index.html`. To use GitHub Pages:
