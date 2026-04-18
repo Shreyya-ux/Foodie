@@ -40,6 +40,8 @@ Designed for performance, accessibility, and user delight — it offers an effor
 
 ## ✨ Key Features
 
+✅ **Favorite Recipes** — Bookmark your favorite recipes effortlessly with the ⭐ button. Browse them all in your tailored "My Favorites" page. Saved securely using localStorage.
+
 ✅ **Fully Responsive** — Works seamlessly on mobile, tablet, and desktop.
 💡 **Modern UI/UX** — Minimalist design with smooth animations and intuitive navigation.
 🛒 **Smart Cart System** — Add, edit, or remove items with instant price updates.
