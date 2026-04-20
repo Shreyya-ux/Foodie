@@ -66,81 +66,42 @@
 
 
 <body>
-    <header>
-        <nav class="navbar flex between wrapper">
-            <a href="index.html" class="logo">Foodie.</a>
+<header>
+    <nav class="navbar flex between wrapper">
+        <a href="index.html" class="logo">Foodie<span>.</span></a>
 
-            <ul class="navList flex gap-3 between">
-                <li><a class="active" href="./index.html#home" data-i18n=".home">Home</a></li>
-                <li><a href="./menu.html" data-i18n=".menu">Menu</a></li>
-                <li><a href="./aboutUs.html" data-i18n=".about">About Us</a></li>
-                <li><a href="./contactUs.html" data-i18n=".contact">Contact Us</a></li>
-                <li><a href="nearbyres.html" data-i18n=".nearby">Nearby Restaurants</a></li>
-            </ul>
-            <div class="desktop-action flex gap-2">
-                <div class="custom-select" id="language-custom-select">
-                    <div class="selected" tabindex="0" aria-haspopup="listbox" aria-expanded="false"
-                        aria-labelledby="language-custom-select">
-                        English
-                    </div>
-                    <ul class="options" role="listbox" tabindex="-1">
-                        <li data-value="en" role="option" aria-selected="true">English</li>
-                        <li data-value="hi" role="option">हिंदी</li>
-                        <li data-value="kn" role="option">ಕನ್ನಡ</li>
-                    </ul>
-                </div>
+        <ul class="navList flex gap-2">
+            <li><a class="active" href="./index.html">Home</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li><a href="./aboutUs.html">About Us</a></li>
+            <li><a href="./contactUs.html">Contact Us</a></li>
+        </ul>
 
-                <form class="navbar-search" action="#" method="get">
-                    <input type="text" id="navbar-search" placeholder="Search your food ..."
-                        data-i18n-placeholder="nav.searchPlaceholder" />
-                    <button type="submit" id="navbar-search-btn" aria-label="Search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
-
-                <button class="desktop-action theme-toggle" aria-label="Toggle dark mode">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-
-                <a href="./checkout.html" class="cart-icon">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <span class="cart-value">0</span>
-                </a>
-
-                <a href="./signup.html" class="btn" data-i18n=".signIn">
-                    Sign in&nbsp;<i class="fa-solid fa-arrow-right-from-bracket"></i>
-                </a>
-
-
-                <a href="#" class="hamberger"><i class="fa-solid fa-bars"></i></a>
+        <div class="desktop-action flex gap-1 items-center">
+            
+            <div class="lang-box">
+                <span style="font-size: 14px; font-weight: 600;">EN</span>
+                <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i>
             </div>
 
+            <div class="nav-search-container">
+                <input type="text" placeholder="Search...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
 
-            <ul class="mobile-menu">
-                <li><a class="active" href="./index.html#home" data-i18n="home">Home</a></li>
-                <li><a href="./menu.html" data-i18n="menu">Menu</a></li>
-                <li><a href="./aboutUs.html" data-i18n="about">About Us</a></li>
-                <li><a href="./contactUs.html" data-i18n="contact">Contact Us</a></li>
-                <li><a href="nearbyres.html" data-i18n="nearby">Nearby Restaurants</a></li>
-                <form class="navbar-search" action="#" method="get">
-                    <input type="text" name="search" id="navbar-search" placeholder="Search your food ...">
-                    <button type="submit" id="navbar-search-btn" aria-label="Search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
-                <li>
-                    <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle dark mode">
-                        <i class="fa-solid fa-moon"></i><span>Dark Mode</span>
-                    </button>
-                </li>
-                <li>
-                    <a href="./signup.html" class="btn">
-                        Sign in&nbsp;<i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+            <button class="theme-toggle nav-btn"><i class="fa-solid fa-moon"></i></button>
+
+            <a href="./checkout.html" class="cart-icon nav-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <a href="./signup.html" class="btn-primary">Sign In</a>
+
+            <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+</header>
 
     <div id="offlineMessage"
         style="display: none; max-width: 500px; margin: 40px auto; padding: 20px; text-align: center; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
