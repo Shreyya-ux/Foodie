@@ -66,6 +66,23 @@
 
 
 <body>
+<header>
+    <nav class="navbar flex between wrapper">
+        <a href="index.html" class="logo">Foodie<span>.</span></a>
+
+        <ul class="navList flex gap-2">
+            <li><a class="active" href="./index.html">Home</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li><a href="./aboutUs.html">About Us</a></li>
+            <li><a href="./contactUs.html">Contact Us</a></li>
+        </ul>
+
+        <div class="desktop-action flex gap-1 items-center">
+            
+            <div class="lang-box">
+                <span style="font-size: 14px; font-weight: 600;">EN</span>
+                <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i>
+            </div>
     <header>
         <nav class="navbar flex between wrapper">
             <a href="index.html" class="logo">Foodie.</a>
@@ -111,15 +128,24 @@
                     <span class="cart-value">0</span>
                 </a>
 
-                <a href="./signup.html" class="btn" data-i18n=".signIn">
-                    Sign in&nbsp;<i class="fa-solid fa-arrow-right-from-bracket"></i>
-                </a>
-
-
-                <a href="#" class="hamberger"><i class="fa-solid fa-bars"></i></a>
+            <div class="nav-search-container">
+                <input type="text" placeholder="Search...">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
 
+            <button class="theme-toggle nav-btn"><i class="fa-solid fa-moon"></i></button>
 
+            <a href="./checkout.html" class="cart-icon nav-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <a href="./signup.html" class="btn-primary">Sign In</a>
+
+            <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+</header>
             <ul class="mobile-menu">
                 <li><a class="active" href="./index.html#home" data-i18n="nav.home">Home</a></li>
                 <li><a href="./menu.html" data-i18n="nav.menu">Menu</a></li>
