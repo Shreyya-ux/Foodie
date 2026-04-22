@@ -9,6 +9,11 @@ const {
   safeLocalStorage
 } = window.FoodieErrorHandler || {};
 
+// ===== FIX: Define missing variables =====
+let productsPath = '../products.json';
+const isUsingServer = window.location.protocol !== 'file:';
+const _retry = retry ?? (async (fn) => fn());
+
 // ===== LOADING STATE MANAGEMENT =====
 let loadingStates = new Map();
 
@@ -779,7 +784,7 @@ const loadProducts = async (retryCount = 0) => {
         // Try the primary path first with retry mechanism
         let data;
         try {
-            data = await retry(async () => {
+            data = await _retry(async () => {
                 let res;
                 try {
                     res = await fetch(productsPath);
