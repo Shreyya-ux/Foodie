@@ -1,18 +1,7 @@
-// ===== ERROR HANDLING IMPORTS =====
-const {
-  safeFetch,
-  retry,
-  NetworkError,
-  showErrorToast,
-  showSuccessToast,
-  errorLogger,
-  safeLocalStorage
-} = window.FoodieErrorHandler || {};
-
 // ===== FIX: Define missing variables =====
 let productsPath = '../products.json';
 const isUsingServer = window.location.protocol !== 'file:';
-const _retry = retry ?? (async (fn) => fn());
+const _retry = async (fn) => fn();
 
 // ===== LOADING STATE MANAGEMENT =====
 let loadingStates = new Map();
